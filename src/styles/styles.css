@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../assets/images/background.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.App {
+    border-radius: 6px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    width: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 36px;
+}
+
+.container {
+    width: 550px;
+}
+
+button {
+    background-color: #ffc500;
+    border: 0;
+    border-radius: 50px;
+    line-height: 35px;
+    cursor: pointer;
+    font-weight: bold;
+    width: fit-content;
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.submit-button,
+.add-new-button {
+    margin-top: 0 !important;
+}
+
+.add-submit-btn-container {
+    display: flex;
+    width: 400px;
+    margin: auto;
+}
+
+.add-submit-btn-container > :nth-child(1) {
+    flex: 1;
+    margin-left: auto;
+    margin-right: 8px;
+}
+
+.add-submit-btn-container > :nth-child(2) {
+    margin-right: auto;
+    flex: 1;
+}
+
+button:hover {
+    background-color: #ffb100;
+}
+
+.general-div {
+    margin: 18px;
+    margin-top: 36px;
+}
+
+.general-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name-field > :nth-child(1),
+.company-name-title-field > :nth-child(1) {
+    margin-right: 8px;
+}
+
+.name-field,
+.company-name-title-field {
+    display: flex;
+}
+
+.company-name-title-field {
+    margin-bottom: 8px;
+}
+
+.name-field > input,
+.company-name-title-field > input {
+    flex: auto;
+}
+
+.general-form > :nth-child(3) {
+    margin: 8px 0;
+}
+
+.general-form > :nth-child(4) {
+    margin-bottom: 8px;
+}
+
+.form-header {
+    position: relative;
+    padding: 0 3px;
+    width: fit-content;
+    margin-bottom: 8px;
+}
+
+span {
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    bottom: 3px;
+    opacity: 0.4;
+    left: 0;
+    background-color: #ffb100;
+    z-index: 0;
+}
+
+h2 {
+    position: relative;
+}
+
+input,
+textarea {
+    padding: 6px 12px;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+:focus{
+    color: #212529;
+    background-color: #fff;
+    border-color: #ffb100;
+    opacity: 0.4;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 177 0 / 25%);
+}
+
+.degree-div,
+.job-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.degree-div > input,
+.job-div > textarea,
+.job-start-date-div > label,
+.job-end-date-div > label {
+    margin-bottom: 8px;
+}
+
+.graduation-date {
+    display: flex;
+    align-items: center;
+}
+
+.graduation-date > label {
+    width: fit-content;
+    margin-right: 8px;
+}
+
+.graduation-date > input {
+    flex: auto;
+}
+
+.edit-experience-div {
+    margin: 18px 0;
+    margin-bottom: 0;
+}
+
+.job-div > textarea {
+    flex: 1;
+}
+
+.job-date-div {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.job-start-date-div,
+.job-end-date-div {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.job-date-div > :nth-child(1) {
+    margin-right: 8px;
+}
+
+
+
+
+
+
+.submitted-name-div {
+    display: flex;
+    position: relative;
+    padding: 0 3px;
+    width: 550px;
+    margin-bottom: 8px;
+}
+
+.contact-div,
+.education-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.edit-button {
+    margin: 0;
+}
+
+.experience-div,
+.education-div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.company-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-date {
+    color: grey;
+    font-style: italic;
+}
+
+li {
+    list-style-position: inside;
+}
