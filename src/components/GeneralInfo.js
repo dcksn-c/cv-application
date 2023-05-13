@@ -32,6 +32,7 @@ class GeneralInfo extends Component {
             editMode: true
         })
     }
+
     render() {
         const { firstName, lastName, email, phone, editMode } = this.state;
         const editButton = <button onClick={this.handleEdit} className="edit-button">EDIT</button>;
@@ -90,15 +91,14 @@ class GeneralInfo extends Component {
                 <div className="submitted-name-div">
                     <span></span>
                     <h1>{firstName.toUpperCase()} {lastName.toUpperCase()}</h1>
-
                 </div>
                 <div className='contact-div'>
-                <div>
-                    <p><strong>Email: </strong>{email}</p>
-                    <p><strong>Phone: </strong>{phone}</p>
-                    <br/>
-                </div>
-                {editButton}
+                    <div>
+                        <p><strong>Email: </strong>{email}</p>
+                        <p><strong>Phone: </strong>{phone}</p>
+                        <br/>
+                    </div>
+                    {editButton}
                 </div>
             </div>
         )

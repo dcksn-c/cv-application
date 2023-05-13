@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import uniqid from "uniqid";
 import { format, parseISO } from 'date-fns'
 import JobInfo from './JobInfo';
-import "../styles/styles.css"
+import "../styles/styles.css";
 import JobTasks from './JobTasks';
 
 class Experience extends Component {
@@ -72,8 +72,6 @@ class Experience extends Component {
         })
     }
 
-
-
     render() {
         const { jobArr, editMode } = this.state;
         const editButton = <button onClick={this.handleEdit} className="edit-button">EDIT</button>;
@@ -89,23 +87,23 @@ class Experience extends Component {
                 </div>
                 {jobArr.map(item => {
                     return (
-                            <JobInfo 
-                                handleChange={this.handleChange}
-                                handleDelete={this.handleDelete}
-                                handleAddNew={this.handleAddNew}
-                                key={item.id} 
-                                id={item.id}
-                                company={item.company}
-                                title={item.title}
-                                tasks={item.tasks}
-                                start={item.start}
-                                end={item.end}
-                            />
-                            )
+                        <JobInfo 
+                            handleChange={this.handleChange}
+                            handleDelete={this.handleDelete}
+                            handleAddNew={this.handleAddNew}
+                            key={item.id} 
+                            id={item.id}
+                            company={item.company}
+                            title={item.title}
+                            tasks={item.tasks}
+                            start={item.start}
+                            end={item.end}
+                        />
+                    )
                 })}
                 <div className='add-submit-btn-container'>
-                {editMode && addNewButton}
-                {submitButton}
+                    {editMode && addNewButton}
+                    {submitButton}
                 </div>
             </div>
         )
@@ -121,14 +119,12 @@ class Experience extends Component {
                     return (
                         <div key={item.id}>
                             <div className='company-details'>
-                            <div>
-                            
-                            <h3>{item.title}</h3>
-                            <p>{item.company}</p>
+                                <div>
+                                    <h3>{item.title}</h3>
+                                    <p>{item.company}</p>
+                                </div>
+                                {(item.start !== "" && item.end !== "") && <p className='job-date'>{format(parseISO(item.start), "MM/yy")} - {format(parseISO(item.end), "MM/yy")}</p>}
                             </div>
-                            {(item.start !== "" && item.end !== "") && <p className='job-date'>{format(parseISO(item.start), "MM/yy")} - {format(parseISO(item.end), "MM/yy")}</p>}
-                            </div>
-                            
                             <JobTasks tasks={item.tasks} />
                             {jobArr[index+1] && <br/>}
                         </div>

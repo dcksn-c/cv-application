@@ -7,8 +7,8 @@ class JobTasks extends Component {
         if (tasks === "") return;
         const formatDesc = (
             tasks.split('\n').map(bulletItem => {
-            return <li key={uniqid()}>{bulletItem}</li>
-        })
+                return <li key={uniqid()}>{bulletItem}</li>
+            })
         )
         return (
             <ul>

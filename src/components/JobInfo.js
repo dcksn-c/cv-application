@@ -38,44 +38,42 @@ class JobInfo extends Component {
                         ></input>
                     </div>
                     <textarea
-                        placeholder="Main Job Tasks"
+                        placeholder="Main Job Tasks. Press Enter to start a new bullet."
                         onChange={handleChange}
                         name="tasks"
                         className={id}
                         value={tasks}
                         rows={4}
-                        
                         required
                     />
                     <div className='job-date-div'>
-                    <div className='job-start-date-div'>
-                    <label htmlFor='job-start-date'>Start Date</label>
-                    <input
-                        type="date"
-                        id='job-start-date'
-                        onChange={handleChange}
-                        name="start"
-                        className={id}
-                        value={start}
-                        required
-                    ></input>
-                    </div>
-                    <div className='job-end-date-div'>
-                    <label htmlFor='job-end-date'>End Date</label>
-                    <input
-                        type="date"
-                        id='job-end-date'
-                        onChange={handleChange}
-                        name="end"
-                        className={id}
-                        value={end}
-                        required
-                    ></input>
-                    </div>
+                        <div className='job-start-date-div'>
+                            <label htmlFor='job-start-date'>Start Date</label>
+                            <input
+                                type="date"
+                                id='job-start-date'
+                                onChange={handleChange}
+                                name="start"
+                                className={id}
+                                value={start}
+                                required
+                            ></input>
+                        </div>
+                        <div className='job-end-date-div'>
+                            <label htmlFor='job-end-date'>End Date</label>
+                            <input
+                                type="date"
+                                id='job-end-date'
+                                onChange={handleChange}
+                                name="end"
+                                className={id}
+                                value={end}
+                                required
+                            ></input>
+                        </div>
                     </div>
                     <button className={id} onClick={handleDelete}>− DELETE</button>
                 </form>
-                
             </div>
         )
     }

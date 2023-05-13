@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
-import "../styles/styles.css"
+import "../styles/styles.css";
 
 class DegreeInfo extends Component {
     render() {
         // destructures these props so we could use them by their name instead of "this.props.someProperty"
-        const { handleChange, handleDelete, id, school, title, date } = this.props;
+        const {
+            handleChange,
+            handleDelete,
+            id,
+            school,
+            title,
+            date
+        } = this.props;
 
         return(
             <div className='container'>
@@ -28,20 +35,19 @@ class DegreeInfo extends Component {
                         required
                     ></input>
                     <div className='graduation-date'>
-                    <label htmlFor="graduation-date" className="form-labels">Graduation Date</label>
-                    <input
-                        type="date"
-                        id="graduation-date"
-                        onChange={handleChange}
-                        name="date"
-                        className={id}
-                        value={date}
-                        required
-                    ></input>
+                        <label htmlFor="graduation-date" className="form-labels">Graduation Date</label>
+                        <input
+                            type="date"
+                            id="graduation-date"
+                            onChange={handleChange}
+                            name="date"
+                            className={id}
+                            value={date}
+                            required
+                        ></input>
                     </div>
                     <button className={id} onClick={handleDelete}>− DELETE</button>
                 </form>
-                
             </div>
         )
     }

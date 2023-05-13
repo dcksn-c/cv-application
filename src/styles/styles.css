@@ -96,7 +96,9 @@ button:hover {
 }
 
 .name-field > input,
-.company-name-title-field > input {
+.company-name-title-field > input,
+.job-div > textarea,
+.graduation-date > input {
     flex: auto;
 }
 
@@ -173,17 +175,9 @@ textarea {
     margin-right: 8px;
 }
 
-.graduation-date > input {
-    flex: auto;
-}
-
 .edit-experience-div {
     margin: 18px 0;
     margin-bottom: 0;
-}
-
-.job-div > textarea {
-    flex: 1;
 }
 
 .job-date-div {
@@ -201,11 +195,6 @@ textarea {
 .job-date-div > :nth-child(1) {
     margin-right: 8px;
 }
-
-
-
-
-
 
 .submitted-name-div {
     display: flex;

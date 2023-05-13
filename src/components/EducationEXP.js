@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import uniqid from "uniqid";
 import { format, parseISO } from 'date-fns'
 import DegreeInfo from './DegreeInfo';
-import "../styles/styles.css"
+import "../styles/styles.css";
 
 class EducationEXP extends Component {
     constructor() {
@@ -44,8 +44,7 @@ class EducationEXP extends Component {
                 return degree.id === e.target.className ? {
                     ...degree,
                     [e.target.name]: e.target.value,
-                } : degree;
-                
+                    } : degree;
             })
         })
         
@@ -67,7 +66,7 @@ class EducationEXP extends Component {
         this.setState({
             editMode: true,
             degreeArr: this.state.degreeArr.filter(degree => {
-                return degree.id !== e.target.className ; 
+                return degree.id !== e.target.className; 
             })
         })
     }
@@ -87,19 +86,19 @@ class EducationEXP extends Component {
                 </div>
                 {degreeArr.map(item => {
                     return <DegreeInfo 
-                                handleAddNew={this.handleAddNew}
-                                handleChange={this.handleChange}
-                                handleDelete={this.handleDelete}
-                                key={item.id} 
-                                id={item.id}
-                                school={item.school}
-                                title={item.title}
-                                date={item.date}
-                            />
+                        handleAddNew={this.handleAddNew}
+                        handleChange={this.handleChange}
+                        handleDelete={this.handleDelete}
+                        key={item.id} 
+                        id={item.id}
+                        school={item.school}
+                        title={item.title}
+                        date={item.date}
+                    />
                 })}
                 <div className='add-submit-btn-container'>
-                {editMode && addNewButton}
-                {submitButton}
+                    {editMode && addNewButton}
+                    {submitButton}
                 </div>
             </div>
         )
@@ -114,12 +113,12 @@ class EducationEXP extends Component {
                 {degreeArr.map(item=> {
                     return (
                         <div key={item.id} className="education-details">
-                        <div>
-                            <h3>{item.school}</h3>
-                            <p>{item.title}</p>
-                            {item.date !== "" && <p>Graduated {format(parseISO(item.date), "MM/yy")}</p>}
-                            <br/>
-                        </div>
+                            <div>
+                                <h3>{item.school}</h3>
+                                <p>{item.title}</p>
+                                {item.date !== "" && <p>Graduated {format(parseISO(item.date), "MM/yy")}</p>}
+                                <br/>
+                            </div>
                         </div>
 
                     )
